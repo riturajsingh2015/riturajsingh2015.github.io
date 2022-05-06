@@ -90,14 +90,23 @@ header nav .branding{
 }
 
 .btn{
-    padding:0.50rem 1rem;
-    /*font-size: 1rem;*/
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 6px 16px;
     font-weight: 600;
-    outline: none;
-    cursor: pointer;
-    transition: all .4s;
-    border-radius:2px;
+    border-radius: 12px;
+    cursor: pointer; 
+    transition: all .3s ease;
 }
+
+
+.btn .btn-primary a{
+    text-decoration: none;
+}
+
+
+
 .hero{
     padding: 7rem 0;
 }
@@ -132,10 +141,27 @@ header nav .branding{
 
 }
 
+.hero .left img{
+    border-radius: 60%; 
+    border:solid 2px var(--ternary);
+}
+
+
 
 .hero .right{
     margin-top:-7rem ;
 }
+
+.social_icons a{
+    padding-left: 10px;
+    color: var(--pure);
+    transition: all .3s ease;
+}
+
+.social_icons a:hover{    
+    color: var(--primary);
+}
+
 
 section{
     padding-top: 6rem;
@@ -144,6 +170,8 @@ section{
     margin-top: 6rem;
     padding: 0rem;
 }
+
+/*About section*/
 
 section.about .about-me-img{
     height:450px ;
@@ -172,28 +200,23 @@ section.about p{
 
 section.about .social{
     display: flex;
+    justify-content: center;
 }
 
 section.about .social a{
-    background: var(--pure);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 0.6rem;
+    color: var(--dark);
+    padding-left: 15px;    
     transition: all .3s ease;
     
 }
+section.about .social a:hover{
+    color: var(--primary);
+}
 
-.btn .btn-primary a{
+.social a{
     text-decoration: none;
 }
 
-section.about .social a:hover{
-    background: var(--pure);
-}
 
 section.about .social a img{
     width: 100%;
@@ -206,14 +229,19 @@ section.about .right p{
     line-height: 1.8;
     margin-bottom: 2rem;
 }
+
+
+/* Education section*/
+
 section.education {
     padding-top:4rem;
     padding-bottom: 10rem;
-    background-color: var(--darkBlue);
+    background-color: var(--dark);
 }
 section.education img{
     padding-top: 1rem;
     padding-bottom: 1rem;
+    border-radius: 6px;
     background-color: var(--pure);
 }
 section.education .right{
@@ -338,7 +366,7 @@ section.contact .input-wrap-2{
     padding: 10px;
  }
  .cardTexts_odd button{
-     padding: 10px;
+     /*padding: 10px;*/
      margin: 10px;
  }
 section.services{
@@ -565,6 +593,13 @@ footer .section-heading-white{
 
 footer .footer-socials a{
     margin-right: 2.5rem;
+    transition: all .3s ease;
+    color: var(--pure);
+}
+
+
+footer .footer-socials a:hover{
+    color: var(--primary);
 }
 
 footer .footer-socials {

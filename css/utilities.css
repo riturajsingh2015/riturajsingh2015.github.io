@@ -10,19 +10,18 @@
 .justify-center{
     justify-content: center;
 }
-.btn-primary{
-    background: var(--primary);
-    color: var(--secondary) ;
-    border-color: var(--primary);
 
-}
+.btn-primary {
+    border-color: black;
+    color: black;
+  }
+  
+  .btn-primary:hover {
+    background-color:var(--primary);
+    color: white;
+  }
 
-.btn-primary:hover{
-    background:transparent;
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
+  
 .btn-secondary{
     background:transparent;
     color: var(--primary);
