@@ -12,13 +12,14 @@
 }
 
 .btn-primary {
-    border-color: black;
-    color: black;
-  }
-  
-  .btn-primary:hover {
     background-color:var(--primary);
     color: white;
+  }
+  
+  .btn-primary:hover {    
+    border-color: black;
+    background-color:white;
+    color: black;
   }
 
   
