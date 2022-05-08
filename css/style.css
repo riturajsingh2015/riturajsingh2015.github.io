@@ -237,7 +237,7 @@ section.education {
     padding-bottom: 6rem;
     background-color: var(--dark);
 }
-section.education img{
+section.education .about-me-img{
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-radius: 6px;
@@ -252,51 +252,71 @@ section.education .right .part1{
     padding-bottom: 3rem;
 }
 section.education .right h3{
-    margin-bottom:0.10rem;
-    margin-right:0.75rem;
+    padding:0.50rem;    
     font-size:1rem;
     font-weight: 900;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;    
     color: var(--pure);
 }
 section.education .right p{
-    font-size: 0.90rem;
-    padding-left: 1rem;
-    margin-bottom:1rem;
+    font-size: 0.85rem;
     color: var(--light);
 }
 
 section.education .right .part2 .box_layout{
-    /*border: solid 1px var(--primary);*/
+    margin-top: 1.5rem;
     background-color: var(--primary);
     border-radius: 12px;
-    padding: 20px;
 }
+
+section.education .right .part2 .box_layout .box_cards{
+    background-color: #2f2f2f;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+section.education .right .part2 .box_layout .box_cards .box_card{   
+    padding: 1.2rem;
+    display: flex;
+    align-items: flex-start;    
+}
+
+section.education .right .part2 .box_layout .box_cards .box_card img{
+    margin-right: 1rem;
+    margin-top: 0.4rem;
+    border-radius: 50%;
+    width: 80px;    
+}
+
+section.education .right .part2 .box_layout .box_cards .box_card h2{
+    color: var(--light);
+    margin-bottom: 0.4rem;
+}
+
+section.education .right .part2 .box_layout .box_cards .box_card .box_card_content{
+    flex: 1;
+    
+}
+
+
 
 section.education h1 span{
     color: var(--primary);
 }
 
-section.education h3{
-    margin-top:2rem;
-    margin-bottom:2rem;
-    font-size:1.6rem;
-    font-weight: 400;
-    
-}
+
 
 section.education p{
     font-family: 'Lato' , sans-serif;    
     line-height: 1.8;
     color: var(--pure);
-    margin-bottom: 2rem;
 }
 
 .h4Heading{
     font-size: 0.99rem;
     text-transform: capitalize;
-    color: var(--dark);
+    color: var(--light);
     margin-bottom: 0.75rem;
 }
 
@@ -383,6 +403,9 @@ section.contact .input-wrap-2{
      /*padding: 10px;*/
      margin: 10px;
  }
+
+ /*Services or Skills section*/
+
 section.services{
     padding-top: 4rem;
     padding-bottom: 3rem;
@@ -397,6 +420,7 @@ section.services .card-wrapper{
 
 section.services .card-wrapper .card{
     background: var(--pure);
+    border-radius: 6px;
     padding:3rem 2rem ;
     position: relative;
     padding-top: 5rem;
@@ -405,7 +429,7 @@ section.services .card-wrapper .card{
 }
 
 section.services .card-wrapper .card:hover{
-    background: var(--dark);
+    background: #DDDDDD;
 }
 
 section.services .card-wrapper .card img{
@@ -421,9 +445,6 @@ section.services .card-wrapper .card h2{
     margin-bottom: 0.5rem;
 }
 
-section.services .card-wrapper .card:hover h2 ,section.services .card-wrapper .card:hover h2{
-    color: var(--pure);
-}
 
 
 section.services .card-wrapper .card p{
@@ -494,6 +515,7 @@ section.work .card-wrapper{
 
 section.work .card-wrapper .card{
     position: relative;
+
 }
 
 section.work .card-wrapper .card .overlay{
@@ -531,6 +553,8 @@ section.work .card-wrapper .card img{
     width: 550px;
 }
 
+/*Contact Section*/
+
 section.contact .card-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -539,6 +563,7 @@ section.contact .card-wrapper{
 
 section.contact .card-wrapper .card{
     text-align: center;
+    
 }
 
 section.contact .card-wrapper .card img{
