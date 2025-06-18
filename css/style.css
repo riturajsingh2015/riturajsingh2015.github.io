@@ -11,9 +11,12 @@
     --deep:#2b55cc;
     --darktxt:#848db3;
     --dark-blue:#28365f;
+    --global-font-size: 14px;
+    --font-stack: dm, Monaco, Courier New, monospace, serif;
 }
 body{
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--font-stack);
+    font-size: var(--global-font-size);
     /*font-family: 'Poppins',sans-serif;*/
     width: 100%;
     height: 100%;
