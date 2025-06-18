@@ -1,8 +1,8 @@
 @import 'utilities.css';
 :root{
     /*--primary:#00FFE1;*/
-    --primary:#E31C25; 
-    --dark:#161616;
+    --primary: #fc793b;; 
+    --dark:#262626;
     --pure:#FFFFFF;
     --ternary:#898989;
     --light:#F2F2F2;
