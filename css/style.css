@@ -17,6 +17,7 @@
 body{
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
+    text-align: center;
     /*font-family: 'Poppins',sans-serif;*/
     width: 100%;
     height: 100%;
@@ -111,7 +112,7 @@ header nav .branding{
 
 
 .hero{
-    padding: 7rem 0;
+    padding: 10rem 0;
 }
 .hero .left img{
     width: 400px;
@@ -128,8 +129,8 @@ header nav .branding{
 }
 
 .hero .right h1{
-    font-size: 4rem;
-    font-weight: 100;
+    font-size: 6rem;
+    /* font-weight: 100; */
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
@@ -176,6 +177,7 @@ section{
 /*About section*/
 
 section.about .about-me-img{
+    border-radius: 70%;
     height:450px ;
 }
 
