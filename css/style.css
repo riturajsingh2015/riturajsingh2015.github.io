@@ -18,7 +18,6 @@ body{
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
     text-align: center;
-    /*font-family: 'Poppins',sans-serif;*/
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -40,7 +39,7 @@ html{
 
 header{
     background: var(--dark);
-    clip-path: polygon(0 0, 100% 0, 100% 100%,70% 87%, 0 100%);
+    
 }
 
 .container{
@@ -86,7 +85,7 @@ header nav .left a{
 }
 
 header nav{
-    padding:2rem 0;
+    padding:1.5rem 0;
 }
 
 header nav .branding{
@@ -112,10 +111,11 @@ header nav .branding{
 
 
 .hero{
-    padding: 10rem 0;
-}
-.hero .left img{
-    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero .right{
@@ -123,16 +123,17 @@ header nav .branding{
 }
 
 .hero .right h6{
-    font-size: 1.6rem;
-    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--pure);
     margin-bottom: 2rem;
 }
 
 .hero .right h1{
-    font-size: 6rem;
-    /* font-weight: 100; */
+    font-size: 7vw;
+    letter-spacing: 0.9pt;
     line-height: 1.2;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .hero .right h1 span{
@@ -140,8 +141,9 @@ header nav .branding{
 }
 
 .hero .right p{
-    line-height: 1.9;
-    margin-bottom: 2rem;
+    line-height: 1.5;
+    letter-spacing: 2pt;
+    /* margin-bottom: 2rem; */
 
 }
 
