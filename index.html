@@ -72,10 +72,16 @@ https://docs.crawl4ai.com/ -->
 
                         <div>
 
-                            <button class="btn btn-primary"
-                                onClick="location.href='https://drive.google.com/file/d/1PlrHg0iPybwWmUvQLKZeG9FqYE7ZREfI/view'">
-                                Check Resume
-                            </button>
+                            <svg viewBox="0 0 100 100">
+                                <!-- Circle -->
+                                <path d="M50,10 A40,40 0 1,1 49.99,10" />
+
+                                <!-- Arrow shaft -->
+                                <path d="M50,30 L50,60" style="animation-delay: 0.5s;" />
+
+                                <!-- Arrow head -->
+                                <path d="M40,50 L50,60 L60,50" style="animation-delay: 1s;" />
+                            </svg>
                         </div>
 
 
@@ -448,52 +454,52 @@ https://docs.crawl4ai.com/ -->
     </footer>
     </div>
     <script src="./js/app.js"></script>
-   <script>
-let bubbles = [];
+    <script>
+        let bubbles = [];
 
-function setup() {
-    let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent("p5-background");
-    for (let i = 0; i < 80; i++) {
-        bubbles.push(new Bubble());
-    }
-}
+        function setup() {
+            let canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent("p5-background");
+            for (let i = 0; i < 80; i++) {
+                bubbles.push(new Bubble());
+            }
+        }
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
 
-function draw() {
-    background(15, 15, 25, 40);
-    for (let b of bubbles) {
-        b.move();
-        b.display();
-    }
-}
+        function draw() {
+            background(15, 15, 25, 40);
+            for (let b of bubbles) {
+                b.move();
+                b.display();
+            }
+        }
 
-class Bubble {
-    constructor() {
-        this.x = random(width);
-        this.y = random(height);
-        this.r = random(10, 30);
-        this.offset = random(1000);
-    }
+        class Bubble {
+            constructor() {
+                this.x = random(width);
+                this.y = random(height);
+                this.r = random(10, 30);
+                this.offset = random(1000);
+            }
 
-    move() {
-        // gentle float with Perlin noise
-        this.x += map(noise(this.offset + frameCount * 0.005), 0, 1, -0.5, 0.5);
-        this.y += map(noise(this.offset + frameCount * 0.008), 0, 1, -0.3, 0.3);
-    }
+            move() {
+                // gentle float with Perlin noise
+                this.x += map(noise(this.offset + frameCount * 0.005), 0, 1, -0.5, 0.5);
+                this.y += map(noise(this.offset + frameCount * 0.008), 0, 1, -0.3, 0.3);
+            }
 
-    display() {
-        noStroke();
-        let d = dist(this.x, this.y, mouseX, mouseY);
-        let alpha = map(d, 0, width / 2, 255, 50);
-        fill(135, 206, 250, alpha); // light blue, with fade
-        ellipse(this.x, this.y, this.r + sin(frameCount * 0.05 + this.offset) * 2);
-    }
-}
-</script>
+            display() {
+                noStroke();
+                let d = dist(this.x, this.y, mouseX, mouseY);
+                let alpha = map(d, 0, width / 2, 255, 50);
+                fill(135, 206, 250, alpha); // light blue, with fade
+                ellipse(this.x, this.y, this.r + sin(frameCount * 0.05 + this.offset) * 2);
+            }
+        }
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
