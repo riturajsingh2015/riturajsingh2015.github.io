@@ -8,7 +8,7 @@
   --secondary: #070606;
   --darkBlue: #151a33;
   --deep: #2b55cc;
-  --darktxt: #848db3;
+  --darktxt: #3b3939;
   --dark-blue: #28365f;
   --global-font-size: 14px;
   --font-stack: dm, Monaco, Courier New, monospace, serif;
@@ -211,7 +211,7 @@ header nav .branding {
 }
 
 section {
-  border-bottom: solid 1px var(--light);
+  /* border-bottom: solid 1px var(--light); */
   h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -301,14 +301,13 @@ section.education .right p {
 
 section.education .right .part2 .box_layout {
   margin-top: 1.5rem;
-  background-color: var(--primary);
-  border-radius: 12px;
+}
+section.education .right .part2 .box_layout .box_cards {
+  border: solid 1px var(--light);
 }
 
-section.education .right .part2 .box_layout .box_cards {
-  background-color: #2f2f2f;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+section.education .right .part2 .box_layout .box_title {
+  color: var(--ternary);
 }
 
 section.education .right .part2 .box_layout .box_cards .box_card {
@@ -444,7 +443,7 @@ section.services .card-wrapper {
 }
 
 section.services .card-wrapper .card {
-  background: var(--pure);
+  background: var(--darktxt);
   border-radius: 6px;
   padding: 3rem 2rem;
   position: relative;
@@ -454,7 +453,7 @@ section.services .card-wrapper .card {
 }
 
 section.services .card-wrapper .card:hover {
-  background: #dddddd;
+  /* background: #dddddd; */
 }
 
 section.services .card-wrapper .card img {
@@ -471,7 +470,7 @@ section.services .card-wrapper .card h2 {
 }
 
 section.services .card-wrapper .card p {
-  color: var(--ternary);
+  color: var(--light);
   line-height: 1.6;
 }
 
@@ -580,6 +579,7 @@ section.contact .card-wrapper {
 }
 
 section.contact .card-wrapper .card {
+    color: var(--light);
   text-align: center;
 }
 
@@ -594,7 +594,7 @@ section.contact .card-wrapper .card h1 {
 
 section.contact .card-wrapper .card h6 {
   font-size: 0.8rem;
-  color: var(--dark);
+  color: var(--light);
   font-weight: 400;
   margin-bottom: 3rem;
 }
@@ -638,6 +638,11 @@ footer {
   background: var(--dark);
   text-align: center;
   padding: 5rem 0;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--pure);
+  }
 }
 
 footer .section-heading-white {
