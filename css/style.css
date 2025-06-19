@@ -443,8 +443,8 @@ section.services .card-wrapper {
 }
 
 section.services .card-wrapper .card {
-  background: var(--darktxt);
-  border-radius: 6px;
+
+  border: solid 1px var(--light);
   padding: 3rem 2rem;
   position: relative;
   padding-top: 5rem;
@@ -464,6 +464,7 @@ section.services .card-wrapper .card img {
 }
 
 section.services .card-wrapper .card h2 {
+  color: var(--pure);
   font-weight: 400;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
