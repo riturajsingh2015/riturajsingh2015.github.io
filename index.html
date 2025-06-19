@@ -39,6 +39,7 @@ https://docs.crawl4ai.com/ -->
             </ul>
         </div>
         <header>
+            <div id="p5-background"></div> <!-- Background container -->
             <div id="home" class="container">
                 <nav id="main-nav" class="flex items-center justify-between">
                     <div class="left flex items-center">
@@ -64,10 +65,11 @@ https://docs.crawl4ai.com/ -->
                 </nav>
 
                 <div class="hero">
+
                     <div class="right">
                         <h1>RITURAJ SINGH</h1>
                         <h6>Odoo Fullstack Developer </h6>
-                     
+
                         <div>
 
                             <button class="btn btn-primary"
@@ -142,9 +144,12 @@ https://docs.crawl4ai.com/ -->
                                             <h4 class="h4Heading">
                                                 MSc Computer Science
                                             </h4>
-                                            <p>Hochschule Stralsund having completed Master's in Computer Science with a specialization in Software Development.
-                                                Having recently written my Master's Thesis in the sphere of reinforcement learning, I enhanced my research orientation and technical skills in the field of Machine Learning. 
-                                                
+                                            <p>Hochschule Stralsund having completed Master's in Computer Science with a
+                                                specialization in Software Development.
+                                                Having recently written my Master's Thesis in the sphere of
+                                                reinforcement learning, I enhanced my research orientation and technical
+                                                skills in the field of Machine Learning.
+
                                             </p>
                                         </div>
                                     </div>
@@ -177,8 +182,10 @@ https://docs.crawl4ai.com/ -->
                                             <h4 class="h4Heading">
                                                 Research Assistant
                                             </h4>
-                                            <p>Working in the department of Introduction of a Learning Management System , the focus was to switch to
-                                                Moodle Learning Management System from the currently used ILIAS Learning Managment System in a phased manner
+                                            <p>Working in the department of Introduction of a Learning Management System
+                                                , the focus was to switch to
+                                                Moodle Learning Management System from the currently used ILIAS Learning
+                                                Managment System in a phased manner
                                             </p>
                                         </div>
                                     </div>
@@ -190,19 +197,28 @@ https://docs.crawl4ai.com/ -->
                                             <h4 class="h4Heading">
                                                 System Engineer
                                             </h4>
-                                            <p>Led a team of two System Engineers. Together we managed to build a Pilgrim Management System for Uttrakhand and Shri-Mata vaishno devi shrines.
+                                            <p>Led a team of two System Engineers. Together we managed to build a
+                                                Pilgrim Management System for Uttrakhand and Shri-Mata vaishno devi
+                                                shrines.
 
                                                 Automation and Development
-                                                 • Developed Automation scripts in Python and Shell to troubleshoot Network lags.
-                                                 • Built real-time and historical tracking system for Pilgrims using UniqueID-tags.
-                                                 • As a subpart built an Alternate route recommendation system in case of unprecedented accidents.
-                                                
+                                                • Developed Automation scripts in Python and Shell to troubleshoot
+                                                Network lags.
+                                                • Built real-time and historical tracking system for Pilgrims using
+                                                UniqueID-tags.
+                                                • As a subpart built an Alternate route recommendation system in case of
+                                                unprecedented accidents.
+
                                                 Networking
-                                                • Managed the installation and configuration of software and hardware systems on UNIX(Linux-Server) systems.
-                                                • Monitored database Systems (NoSQL based), to check performance of LAN and WAN.
-                                                
+                                                • Managed the installation and configuration of software and hardware
+                                                systems on UNIX(Linux-Server) systems.
+                                                • Monitored database Systems (NoSQL based), to check performance of LAN
+                                                and WAN.
+
                                                 Achievements
-                                                • Achieved great customer and client satisfaction by timely reviewing and updating the application as required by our client , Jammu Government.
+                                                • Achieved great customer and client satisfaction by timely reviewing
+                                                and updating the application as required by our client , Jammu
+                                                Government.
                                             </p>
                                         </div>
                                     </div>
@@ -432,6 +448,55 @@ https://docs.crawl4ai.com/ -->
     </footer>
     </div>
     <script src="./js/app.js"></script>
+   <script>
+let bubbles = [];
+
+function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent("p5-background");
+    for (let i = 0; i < 80; i++) {
+        bubbles.push(new Bubble());
+    }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+    background(15, 15, 25, 40);
+    for (let b of bubbles) {
+        b.move();
+        b.display();
+    }
+}
+
+class Bubble {
+    constructor() {
+        this.x = random(width);
+        this.y = random(height);
+        this.r = random(10, 30);
+        this.offset = random(1000);
+    }
+
+    move() {
+        // gentle float with Perlin noise
+        this.x += map(noise(this.offset + frameCount * 0.005), 0, 1, -0.5, 0.5);
+        this.y += map(noise(this.offset + frameCount * 0.008), 0, 1, -0.3, 0.3);
+    }
+
+    display() {
+        noStroke();
+        let d = dist(this.x, this.y, mouseX, mouseY);
+        let alpha = map(d, 0, width / 2, 255, 50);
+        fill(135, 206, 250, alpha); // light blue, with fade
+        ellipse(this.x, this.y, this.r + sin(frameCount * 0.05 + this.offset) * 2);
+    }
+}
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
 
 
 </body>
